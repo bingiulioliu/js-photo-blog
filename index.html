@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
@@ -21,12 +21,47 @@
     </header>
     <main class="">
         <div class="container mt-5">
-            <div id="cards-container" class="d-flex justify-content-evenly g-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                Messaggio di caricamento ed errore
-                    <h2 id="loadingMsg" class="d-none">Caricamento</h2>
-                    <h2 id="errorMsg" class="d-none">Errore di caricamento</h2>
+            <div id="cards-container"
+                class="d-flex justify-content-evenly g-4 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <!-- Messaggio di caricamento ed errore -->
+                <h2 id="loadingMsg" class="d-none">Caricamento</h2>
+                <h2 id="errorMsg" class="d-none">Errore di caricamento</h2>
                 <!-- Inietto qui le cards -->
-                <p>prova</p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow-sm border-0 bg-light  p-4">
+                        <h2 class="fw-bold mb-4 text-center ls-wide">Aggiungi una foto</h2>
+
+                        <form id="team-form">
+                            <div class="mb-3">
+                                <label for="title" class="form-label small text-secondary">Titolo immagine</label>
+                                <input type="text" class="form-control form-control-sm bg-secondary text-white border-0"
+                                    id="title" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="date" class="form-label small text-secondary">Data</label>
+                                <input type="date" class="form-control form-control-sm bg-secondary text-white border-0"
+                                    id="date">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="img" class="form-label small text-secondary">Carica un'immagine</label>
+                                <input type="file" class="form-control form-control-sm bg-secondary text-white border-0"
+                                    id="img">
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-secondary fw-bold">Aggiungi foto</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
