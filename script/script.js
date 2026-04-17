@@ -18,9 +18,10 @@ function cardInj(cards) {
     // Ciclo for
     for (const card of cards) {
         cardHtml += `
-        <div class="card" style="width: 18rem;">
-            <img src="${card.url}" class="card-img-top" alt="${card.title}">
-            <div class="card-body">
+        <div class="myCard card rounded-0 p-3" style="width: 18rem;">
+            <img src="./img/pin.svg" class="myPin" alt="">
+            <img src="${card.url}" class="card-img-top rounded-0" alt="${card.title}">
+            <div class="card-body p-0 mt-3">
                 <p class="card-text">${card.date}</p>
                 <p class="card-title">${card.title}</p>
             </div>
