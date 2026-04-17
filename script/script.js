@@ -57,8 +57,8 @@ function getNewCard(formElement) {
     // Passa il tag <form> come argomento
     const formData = new FormData(formElement);
     return {
-        date: formData.get('date'),
-        title: formData.get('title'),
+        date: String(formData.get('date')),
+        title: String(formData.get('title')),
         url: imgUrl
     };
 }
@@ -95,10 +95,10 @@ if (form !== null) {
         const newCardHtml = `
         <div class="myCard card rounded-0 p-3" style="width: 18rem;">
             <img src="./img/pin.svg" class="myPin" alt="">
-            <img src="${imgUrl}" class="card-img-top rounded-0" alt="${form.title}">
+            <img src="${imgUrl}" class="card-img-top rounded-0" alt="${newCard.title}">
             <div class="card-body p-0 mt-3">
-                <p class="card-text">${form.date}</p>
-                <p class="card-title">${form.title}</p>
+                <p class="card-text">${newCard.date}</p>
+                <p class="card-title">${newCard.title}</p>
             </div>
         </div>
         `;
