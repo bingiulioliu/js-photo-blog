@@ -37,15 +37,30 @@ function cardInj(cards) {
 // Ricezione immagine e conversione a URL temporaneo
 /** @type {?HTMLInputElement} */
 const imgInputEl = document.querySelector('#img')
+let imgUrl = ''
 if (imgInputEl !== null) {
-    imgInputEl.addEventListener('change', (event) =>{
+    imgInputEl.addEventListener('change', (event) => {
         if (imgInputEl.files !== null && imgInputEl.files.length > 0) {
             const image = imgInputEl.files[0];
-            const imageUrl = URL.createObjectURL(image);
-            console.log(imageUrl);
-            
+            const imageUrlTemp = URL.createObjectURL(image);
+            imgUrl = imageUrlTemp
+            console.log(imgUrl);
         }
     })
+}
+
+
+/** 
+* @param {{title: string, date: string, url: string}[] } formElement
+*/
+function getNewCard(formElement) {
+    // Passa il tag <form> come argomento
+    const formData = new FormData(formElement);
+    return {
+        date: formData.get('date'),
+        title: formData.get('title'),
+        url: imgUrl
+    };
 }
 
 
@@ -73,3 +88,21 @@ if (loadingMsgEl !== null && errorMsgEl) {
 
 
 // Listener
+if (form !== null) {
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const newCard = getNewCard(form);
+        const newCardHtml = `
+        <div class="myCard card rounded-0 p-3" style="width: 18rem;">
+            <img src="./img/pin.svg" class="myPin" alt="">
+            <img src="${imgUrl}" class="card-img-top rounded-0" alt="${form.title}">
+            <div class="card-body p-0 mt-3">
+                <p class="card-text">${form.date}</p>
+                <p class="card-title">${form.title}</p>
+            </div>
+        </div>
+        `;
+        cardsContainerEl?.insertAdjacentHTML('afterbegin', newCardHtml)
+        form.reset();
+    });
+}
