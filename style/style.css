@@ -34,6 +34,7 @@ Fonts
 h1 {
     font-family: "Edu Tas Beginner", sans-serif;
     font-weight: 700;
+    font-size: 65px !important; 
 }
 p {
     font-family: "Sometype Mono", monospace;
@@ -48,4 +49,8 @@ Backgrounds
 }
 .cork-bg {
     background-image: url(../img/cork.png);
+}
+
+header {
+    min-height: 100px;
 }
