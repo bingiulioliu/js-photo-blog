@@ -32,8 +32,20 @@ Fonts
 */
 
 h1 {
-    font-family: "Edu TAS Beginner", sans-serif;
+    font-family: "Edu Tas Beginner", sans-serif;
+    font-weight: 700;
 }
 p {
     font-family: "Sometype Mono", monospace;
+}
+
+
+/* #######
+Backgrounds
+####### */
+.wall-bg {
+    background-image: url(../img/wall.png);
+}
+.cork-bg {
+    background-image: url(../img/cork.png);
 }
