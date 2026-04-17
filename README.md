@@ -37,3 +37,10 @@
 ### Note
 
     Non siete obbligati a usare Bootstrap: siete liberi di decidere come gestire lo stile 🙂
+
+
+## Struttura
+    - header
+        title h1
+    - body
+        cards container (sm row-cols-1, md row-cols-2, lg row-cols-3)
