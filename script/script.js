@@ -6,6 +6,7 @@ const cardsContainerEl = document.querySelector('#cards-container');
 const API_URL = 'https://lanciweb.github.io/demo/api/pictures/';
 const loadingMsgEl = document.querySelector('#loadingMsg');
 const errorMsgEl = document.querySelector('#errorMsg');
+const form = document.querySelector('#form');
 
 // Setto i parametri
 /** 
@@ -28,28 +29,47 @@ function cardInj(cards) {
         </div>
         `
     }
-    if (cardsContainerEl !== null){
+    if (cardsContainerEl !== null) {
         cardsContainerEl.innerHTML = cardHtml;
     }
 }
 
+// Ricezione immagine e conversione a URL temporaneo
+/** @type {?HTMLInputElement} */
+const imgInputEl = document.querySelector('#img')
+if (imgInputEl !== null) {
+    imgInputEl.addEventListener('change', (event) =>{
+        if (imgInputEl.files !== null && imgInputEl.files.length > 0) {
+            const image = imgInputEl.files[0];
+            const imageUrl = URL.createObjectURL(image);
+            console.log(imageUrl);
+            
+        }
+    })
+}
+
+
 // Fetch
-if (loadingMsgEl !== null && errorMsgEl){
+if (loadingMsgEl !== null && errorMsgEl) {
     // Rendo visibile il messaggio
     loadingMsgEl.classList.remove('d-none');
     // Inizio il codice asincrono di promesse
-    fetch (API_URL)
-        .then(response=>{
+    fetch(API_URL)
+        .then(response => {
             return response.json();
         })
-        .then(json =>{
+        .then(json => {
             cardInj(json);
         })
-        .catch(error =>{
+        .catch(error => {
             console.error(Error);
             errorMsgEl.classList.remove('d-none');
         })
         .finally(() => {
             loadingMsgEl.classList.add('d-none');
-        })        
+        })
 };
+
+
+
+// Listener
