@@ -39,3 +39,11 @@ function getNewCard(formElement) {
         url: imgUrl
     };
 }
+
+/** 
+* @param {string} url // l'url deve essere una stringa
+*/
+// Funzione per aprire una immagine in overlay
+function runOverlay(url){
+
+}

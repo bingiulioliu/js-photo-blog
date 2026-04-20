@@ -77,5 +77,9 @@ cardsContainerEl?.addEventListener('click', function(event){
         const imgUrl = cardParent.dataset.url;
         console.log(imgUrl);
         
+        // Se imgUrl è presente, runna la funzione che apre l'immagine in overlay
+        if (imgUrl){
+            runOverlay(imgUrl);
+        }
     }
 })
