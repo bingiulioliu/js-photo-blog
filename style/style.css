@@ -66,8 +66,17 @@ Card
 .myCard {
     position: relative;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease;
 }
 .myPin {
     position: absolute;
     transform: translate(300%, -75%);
+}
+
+/* #######
+Hover
+####### */
+.myCard:hover{
+    transform: scale(1.2) rotate(380deg);
+    z-index: 2;
 }
