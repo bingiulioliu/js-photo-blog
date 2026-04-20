@@ -8,6 +8,7 @@ const loadingMsgEl = document.querySelector('#loadingMsg');
 const errorMsgEl = document.querySelector('#errorMsg');
 const form = document.querySelector('#form');
 const imgOverlay = document.querySelector('#imgOverlay')
+const closeOverlayBtn = document.querySelector('#imgOverlay')
 
 // Ricezione immagine e conversione a URL temporaneo
 /** @type {?HTMLInputElement} */
@@ -84,3 +85,10 @@ cardsContainerEl?.addEventListener('click', function(event){
         }
     }
 })
+
+closeOverlayBtn?.addEventListener('click', () => {
+    
+    imgOverlay.innerHTML='';
+    imgOverlay?.classList.add('d-none');
+    
+});

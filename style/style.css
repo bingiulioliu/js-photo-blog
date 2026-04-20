@@ -99,10 +99,11 @@ Overlay
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #imgOverlay img{
     max-width: 80%;
     max-height: 80%;
-    
 }

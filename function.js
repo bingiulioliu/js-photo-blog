@@ -47,9 +47,11 @@ function getNewCard(formElement) {
 function runOverlay(url){
     let overlayEl = '';
     overlayEl = `
+    <button id="closeOverlayBtn" class="btn btn-secondary">Chiudi</button>
     <img src="${url}" alt="">
     `;
 
+    // Mostro il div dell'overlay e inietto l'immagine
     imgOverlay?.classList.remove('d-none');
     imgOverlay.innerHTML = overlayEl;
 };
