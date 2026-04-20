@@ -107,3 +107,11 @@ Overlay
     max-width: 80%;
     max-height: 80%;
 }
+
+
+/* #######
+No scroll
+####### */
+.noScroll{
+    overflow: hidden;
+}    

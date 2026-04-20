@@ -54,6 +54,7 @@ function runOverlay(url){
     // Mostro il div dell'overlay e inietto l'immagine
     imgOverlay?.classList.remove('d-none');
     imgOverlay.innerHTML = overlayEl;
+    noScroll?.classList.add('noScroll');
 
     // Creo listener qui, altrimenti nel DOM mi riporta null
     // non essistendo ancora il btn in quel momento
@@ -61,6 +62,7 @@ function runOverlay(url){
     closeOverlayBtn?.addEventListener('click', () => {
     imgOverlay.innerHTML='';
     imgOverlay?.classList.add('d-none');
+    noScroll?.classList.remove('noScroll');
     }
 );
 };

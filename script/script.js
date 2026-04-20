@@ -8,6 +8,7 @@ const loadingMsgEl = document.querySelector('#loadingMsg');
 const errorMsgEl = document.querySelector('#errorMsg');
 const form = document.querySelector('#form');
 const imgOverlay = document.querySelector('#imgOverlay')
+const noScroll = document.querySelector('#bodyClass')
 
 
 // Ricezione immagine e conversione a URL temporaneo
