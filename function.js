@@ -54,4 +54,13 @@ function runOverlay(url){
     // Mostro il div dell'overlay e inietto l'immagine
     imgOverlay?.classList.remove('d-none');
     imgOverlay.innerHTML = overlayEl;
+
+    // Creo listener qui, altrimenti nel DOM mi riporta null
+    // non essistendo ancora il btn in quel momento
+    const closeOverlayBtn = document.querySelector('#closeOverlayBtn')
+    closeOverlayBtn?.addEventListener('click', () => {
+    imgOverlay.innerHTML='';
+    imgOverlay?.classList.add('d-none');
+    }
+);
 };
