@@ -8,7 +8,6 @@ const loadingMsgEl = document.querySelector('#loadingMsg');
 const errorMsgEl = document.querySelector('#errorMsg');
 const form = document.querySelector('#form');
 
-
 // Ricezione immagine e conversione a URL temporaneo
 /** @type {?HTMLInputElement} */
 const imgInputEl = document.querySelector('#img')
@@ -66,3 +65,17 @@ if (form !== null) {
         form.reset();
     });
 }
+
+cardsContainerEl?.addEventListener('click', function(event){
+    // Listener sul genitore
+    const clickedEl = event.target;
+
+    const cardParent = clickedEl.closest('.myCard');
+
+    // Estraggo il determinato url della card
+    if (cardParent){
+        const imgUrl = cardParent.dataset.url;
+        console.log(imgUrl);
+        
+    }
+})
