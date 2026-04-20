@@ -77,8 +77,10 @@ Card
 Hover
 ####### */
 .myCard:hover{
-    transform: scale(1.2) rotate(380deg);
-    z-index: 2;
+    transform: scale(1.2) rotate(370deg);
+    z-index: 1;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 .myCard:hover .myPin {
     display: none;
