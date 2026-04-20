@@ -45,5 +45,10 @@ function getNewCard(formElement) {
 */
 // Funzione per aprire una immagine in overlay
 function runOverlay(url){
+    let overlayEl = '';
+    overlayEl = `
+    <img src="${url}" alt="">
+    `;
 
+    imgOverlay.innerHTML = overlayEl;
 }
