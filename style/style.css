@@ -98,7 +98,7 @@ Overlay
     z-index: 666;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 #imgOverlay img{
