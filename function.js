@@ -50,5 +50,6 @@ function runOverlay(url){
     <img src="${url}" alt="">
     `;
 
+    imgOverlay?.classList.remove('d-none');
     imgOverlay.innerHTML = overlayEl;
-}
+};
