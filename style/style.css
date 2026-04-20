@@ -80,3 +80,6 @@ Hover
     transform: scale(1.2) rotate(380deg);
     z-index: 2;
 }
+.myCard:hover .myPin {
+    display: none;
+}
